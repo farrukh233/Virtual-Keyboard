@@ -1693,7 +1693,6 @@ window.addEventListener('keyup', (e) => {
   }
 });
 
-// BackSpace
 document.querySelector('.backspace_key').addEventListener('click', fnBackSpace);
 
 function fnBackSpace() {
@@ -1711,12 +1710,6 @@ function fnBackSpace() {
   }, 200);
 }
 
-// Del
-
-// Shift
-
-// Enter
-
 function fnEnter() {
   const valu = document.querySelector('.text').value;
   if (valu === '') {
@@ -1726,8 +1719,6 @@ function fnEnter() {
   }
 }
 
-// Tab
-
 function fnTab() {
   setTimeout(() => {
     keys.classList.remove('remove');
@@ -1736,10 +1727,3 @@ function fnTab() {
   document.querySelector('.text').value = `${valu} `;
 }
 tab.addEventListener('click', fnTab);
-/*
-document.querySelectorAll('.keys').forEach((el) =>
-  el.addEventListener('click', () => {
-    console.log('F');
-  })
-);
-*/

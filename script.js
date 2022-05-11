@@ -1,17 +1,14 @@
-const xy = '';
+let xy = '';
 let fCapsLock = '0';
 let fShift = '0';
 
 const { body } = document;
 const container = document.createElement('div');
-const header = document.createElement('h1');
-header.classList.add('title');
-header.innerHTML =
-  'Уважаемый проверяющий, проверьте работу пожалуйста 12 числа. Мой дискорд: Farrukh23#8094';
-body.append(header);
-alert(
-  'Уважаемый проверяющий, проверьте работу пожалуйста 12 числа. Мой дискорд: Farrukh23#8094'
-);
+
+const title = document.createElement('div');
+title.classList.add('title');
+title.innerHTML = 'Virtual Keyboard. Windows';
+body.append(title);
 
 container.classList.add('container');
 body.append(container);
@@ -59,17 +56,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}\``;
+            document.querySelector('.text').value = valu + "'";
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}~`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}~`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}\``;
-            }
+            document.querySelector('.text').value = valu + '~';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '~';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + "'";
           }
         }
       };
@@ -87,17 +84,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}1`;
+            document.querySelector('.text').value = valu + '1';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}!`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}!`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}1`;
-            }
+            document.querySelector('.text').value = valu + '!';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '!';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '1';
           }
         }
       };
@@ -115,17 +112,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}2`;
+            document.querySelector('.text').value = valu + '2';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}@`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}@`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}2`;
-            }
+            document.querySelector('.text').value = valu + '@';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '@';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '2';
           }
         }
       };
@@ -143,17 +140,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}3`;
+            document.querySelector('.text').value = valu + '3';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}#`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}#`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}3`;
-            }
+            document.querySelector('.text').value = valu + '#';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '#';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '3';
           }
         }
       };
@@ -171,17 +168,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}4`;
+            document.querySelector('.text').value = valu + '4';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}$`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}$`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}4`;
-            }
+            document.querySelector('.text').value = valu + '$';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '$';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '4';
           }
         }
       };
@@ -199,17 +196,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}5`;
+            document.querySelector('.text').value = valu + '5';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}%`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}%`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}5`;
-            }
+            document.querySelector('.text').value = valu + '%';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '%';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '5';
           }
         }
       };
@@ -227,17 +224,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}6`;
+            document.querySelector('.text').value = valu + '6';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}^`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}^`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}6`;
-            }
+            document.querySelector('.text').value = valu + '^';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '^';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '6';
           }
         }
       };
@@ -255,17 +252,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}7`;
+            document.querySelector('.text').value = valu + '7';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}&`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}&`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}7`;
-            }
+            document.querySelector('.text').value = valu + '&';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '&';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '7';
           }
         }
       };
@@ -283,17 +280,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}8`;
+            document.querySelector('.text').value = valu + '8';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}*`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}*`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}8`;
-            }
+            document.querySelector('.text').value = valu + '*';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '*';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '8';
           }
         }
       };
@@ -311,17 +308,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}9`;
+            document.querySelector('.text').value = valu + '9';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}(`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}(`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}9`;
-            }
+            document.querySelector('.text').value = valu + '(';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '(';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '9';
           }
         }
       };
@@ -339,17 +336,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}0`;
+            document.querySelector('.text').value = valu + '0';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu})`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu})`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}0`;
-            }
+            document.querySelector('.text').value = valu + ')';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + ')';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '0';
           }
         }
       };
@@ -367,17 +364,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}-`;
+            document.querySelector('.text').value = valu + '-';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}_`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}_`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}-`;
-            }
+            document.querySelector('.text').value = valu + '_';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '_';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '-';
           }
         }
       };
@@ -395,17 +392,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}=`;
+            document.querySelector('.text').value = valu + '=';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}+`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}+`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}=`;
-            }
+            document.querySelector('.text').value = valu + '+';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '+';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '=';
           }
         }
       };
@@ -450,17 +447,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}q`;
+            document.querySelector('.text').value = valu + 'q';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}Q`;
-          } else if ((fCapsLock = '1')) {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}Q`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}q`;
-            }
+            document.querySelector('.text').value = valu + 'Q';
+          }
+        } else if ((fCapsLock = '1')) {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'Q';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'q';
           }
         }
       };
@@ -479,17 +476,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}w`;
+            document.querySelector('.text').value = valu + 'w';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}W`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}W`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}W`;
-            }
+            document.querySelector('.text').value = valu + 'W';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'W';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'w';
           }
         }
       };
@@ -507,17 +504,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}e`;
+            document.querySelector('.text').value = valu + 'e';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}E`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}E`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}e`;
-            }
+            document.querySelector('.text').value = valu + 'E';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'E';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'e';
           }
         }
       };
@@ -535,17 +532,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}r`;
+            document.querySelector('.text').value = valu + 'r';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}R`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}R`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}r`;
-            }
+            document.querySelector('.text').value = valu + 'R';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'R';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'r';
           }
         }
       }
@@ -563,17 +560,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}t`;
+            document.querySelector('.text').value = valu + 't';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}T`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}T`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}t`;
-            }
+            document.querySelector('.text').value = valu + 'T';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'T';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 't';
           }
         }
       };
@@ -591,17 +588,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}y`;
+            document.querySelector('.text').value = valu + 'y';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}Y`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}Y`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}y`;
-            }
+            document.querySelector('.text').value = valu + 'Y';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'Y';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'y';
           }
         }
       };
@@ -619,17 +616,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}u`;
+            document.querySelector('.text').value = valu + 'u';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}U`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}U`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}u`;
-            }
+            document.querySelector('.text').value = valu + 'U';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'U';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'u';
           }
         }
       };
@@ -647,17 +644,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}i`;
+            document.querySelector('.text').value = valu + 'i';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}I`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}I`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}i`;
-            }
+            document.querySelector('.text').value = valu + 'I';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'I';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'i';
           }
         }
       };
@@ -675,17 +672,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}o`;
+            document.querySelector('.text').value = valu + 'o';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}O`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}o`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}O`;
-            }
+            document.querySelector('.text').value = valu + 'O';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'O';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'o';
           }
         }
       };
@@ -703,17 +700,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}p`;
+            document.querySelector('.text').value = valu + 'p';
           } else if ((fShift = '1')) {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}P`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}P`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}p`;
-            }
+            document.querySelector('.text').value = valu + 'P';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'P';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'p';
           }
         }
       };
@@ -731,17 +728,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if ((fCapsLock = '0')) {
           if ((fShift = '0')) {
-            document.querySelector('.text').value = `${valu}[`;
+            document.querySelector('.text').value = valu + '[';
           } else if ((fShift = '1')) {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}{`;
-          } else if ((fCapsLock = '0')) {
-            if ((fShift = '0')) {
-              document.querySelector('.text').value = `${valu}{`;
-            } else if ((fShift = '1')) {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}]`;
-            }
+            document.querySelector('.text').value = valu + '{';
+          }
+        } else if ((fCapsLock = '0')) {
+          if ((fShift = '0')) {
+            document.querySelector('.text').value = valu + '{';
+          } else if ((fShift = '1')) {
+            fShift = '0';
+            document.querySelector('.text').value = valu + ']';
           }
         }
       };
@@ -759,17 +756,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if ((fCapsLock = '0')) {
           if ((fShift = '0')) {
-            document.querySelector('.text').value = `${valu}]`;
+            document.querySelector('.text').value = valu + ']';
           } else if ((fShift = '1')) {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}}`;
-          } else if ((fCapsLock = '1')) {
-            if ((fShift = '0')) {
-              document.querySelector('.text').value = `${valu}}`;
-            } else if ((fShift = '1')) {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}]`;
-            }
+            document.querySelector('.text').value = valu + '}';
+          }
+        } else if ((fCapsLock = '1')) {
+          if ((fShift = '0')) {
+            document.querySelector('.text').value = valu + '}';
+          } else if ((fShift = '1')) {
+            fShift = '0';
+            document.querySelector('.text').value = valu + ']';
           }
         }
       };
@@ -787,17 +784,17 @@ for (let i = 0; i < 15; i += 1) {
         const valu = document.querySelector('.text').value;
         if ((fCapsLock = '0')) {
           if ((fShift = '0')) {
-            document.querySelector('.text').value = `${valu}\x2F`;
+            document.querySelector('.text').value = valu + '\x2F';
           } else if ((fShift = '1')) {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}|`;
-          } else if ((fCapsLock = '1')) {
-            if ((fShift = '0')) {
-              document.querySelector('.text').value = `${valu}|`;
-            } else if ((fShift = '1')) {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}\x2F`;
-            }
+            document.querySelector('.text').value = valu + '|';
+          }
+        } else if ((fCapsLock = '1')) {
+          if ((fShift = '0')) {
+            document.querySelector('.text').value = valu + '|';
+          } else if ((fShift = '1')) {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '\x2F';
           }
         }
       };
@@ -805,6 +802,7 @@ for (let i = 0; i < 15; i += 1) {
       break;
     case 14:
       keys.innerHTML = 'Del';
+      keys.classList.add('key_del');
       const fnDel = () => {
         keys.classList.add('active');
         keys.classList.add('remove');
@@ -839,11 +837,17 @@ for (let i = 0; i < 13; i += 1) {
   row2.appendChild(keys);
   switch (i) {
     case 0:
-      keys.innerHTML = 'Caps Lock ';
+      document.querySelector('.caps_lock_key').innerHTML = 'Caps Lock ';
       const fnCapsLock = () => {
-        if (fCapsLock === '0') {
+        document.querySelector('.caps_lock_key').classList.add('active');
+        document.querySelector('.caps_lock_key').classList.add('remove');
+        document.querySelector('.caps_lock_key').classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+        if (fCapsLock == '0') {
           fCapsLock = '1';
-        } else if (fCapsLock === '1') {
+        } else if (fCapsLock == '1') {
           fCapsLock = '0;';
         }
       };
@@ -861,22 +865,23 @@ for (let i = 0; i < 13; i += 1) {
           keys.classList.remove('remove');
         }, 200);
         const valu = document.querySelector('.text').value;
-        if (fCapsLock === '0') {
-          if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}a`;
-          } else if (fShift === '1') {
+        if (fCapsLock == '0') {
+          if (fShift == '0') {
+            document.querySelector('.text').value = valu + 'a';
+          } else if (fShift == '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}A`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}A`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}a`;
-            }
+            document.querySelector('.text').value = valu + 'A';
+          }
+        } else if (fCapsLock == '1') {
+          if (fShift == '0') {
+            document.querySelector('.text').value = valu + 'A';
+          } else if (fShift == '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'a';
           }
         }
       };
+
       keys.addEventListener('click', fnA);
       break;
     case 2:
@@ -891,17 +896,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}s`;
+            document.querySelector('.text').value = valu + 's';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}S`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}S`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}s`;
-            }
+            document.querySelector('.text').value = valu + 'S';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'S';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 's';
           }
         }
       };
@@ -919,17 +924,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}d`;
+            document.querySelector('.text').value = valu + 'd';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}D`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}D`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}d`;
-            }
+            document.querySelector('.text').value = valu + 'D';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'D';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'd';
           }
         }
       };
@@ -947,17 +952,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}f`;
+            document.querySelector('.text').value = valu + 'f';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}F`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}F`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}f`;
-            }
+            document.querySelector('.text').value = valu + 'F';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'F';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'f';
           }
         }
       };
@@ -975,17 +980,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}g`;
+            document.querySelector('.text').value = valu + 'g';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}G`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}G`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}g`;
-            }
+            document.querySelector('.text').value = valu + 'G';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'G';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'g';
           }
         }
       };
@@ -1003,17 +1008,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}h`;
+            document.querySelector('.text').value = valu + 'h';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}H`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}H`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}h`;
-            }
+            document.querySelector('.text').value = valu + 'H';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'H';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'h';
           }
         }
       };
@@ -1031,17 +1036,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}j`;
+            document.querySelector('.text').value = valu + 'j';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}J`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}J`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}j`;
-            }
+            document.querySelector('.text').value = valu + 'J';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'J';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'j';
           }
         }
       };
@@ -1059,17 +1064,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}k`;
+            document.querySelector('.text').value = valu + 'k';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}K`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}K`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}k`;
-            }
+            document.querySelector('.text').value = valu + 'K';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'K';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'k';
           }
         }
       };
@@ -1087,17 +1092,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}l`;
+            document.querySelector('.text').value = valu + 'l';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}L`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}L`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}l`;
-            }
+            document.querySelector('.text').value = valu + 'L';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'L';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'l';
           }
         }
       };
@@ -1115,17 +1120,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu};`;
+            document.querySelector('.text').value = valu + ';';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}:`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}:`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu};`;
-            }
+            document.querySelector('.text').value = valu + ';';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + ':';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + ';';
           }
         }
       };
@@ -1143,17 +1148,17 @@ for (let i = 0; i < 13; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}'`;
+            document.querySelector('.text').value = valu + "'";
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}"`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}"`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}'`;
-            }
+            document.querySelector('.text').value = valu + '"';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '"';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + "'";
           }
         }
       };
@@ -1161,6 +1166,15 @@ for (let i = 0; i < 13; i += 1) {
       break;
     case 12:
       keys.innerHTML = 'ENTER ';
+      const fnEnter = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+      };
+      keys.addEventListener('click', fnEnter);
       break;
     default:
   }
@@ -1213,17 +1227,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}z`;
+            document.querySelector('.text').value = valu + 'z';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}Z`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}Z`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}z`;
-            }
+            document.querySelector('.text').value = valu + 'Z';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'Z';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'z';
           }
         }
       };
@@ -1241,17 +1255,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}x`;
+            document.querySelector('.text').value = valu + 'x';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}X`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}X`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}x`;
-            }
+            document.querySelector('.text').value = valu + 'X';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'X';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'x';
           }
         }
       };
@@ -1269,17 +1283,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}c`;
+            document.querySelector('.text').value = valu + 'c';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}C`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}C`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}c`;
-            }
+            document.querySelector('.text').value = valu + 'C';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'C';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'c';
           }
         }
       };
@@ -1297,17 +1311,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}v`;
+            document.querySelector('.text').value = valu + 'v';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}V`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}V`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}v`;
-            }
+            document.querySelector('.text').value = valu + 'V';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'V';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'v';
           }
         }
       };
@@ -1325,17 +1339,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}b`;
+            document.querySelector('.text').value = valu + 'b';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}B`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}B`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}b`;
-            }
+            document.querySelector('.text').value = valu + 'B';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'B';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'b';
           }
         }
       };
@@ -1353,17 +1367,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}n`;
+            document.querySelector('.text').value = valu + 'n';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}N`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}N`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}n`;
-            }
+            document.querySelector('.text').value = valu + 'N';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'N';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'n';
           }
         }
       };
@@ -1381,17 +1395,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}m`;
+            document.querySelector('.text').value = valu + 'm';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}M`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}M`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}m`;
-            }
+            document.querySelector('.text').value = valu + 'M';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + 'M';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + 'm';
           }
         }
       };
@@ -1409,17 +1423,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu},`;
+            document.querySelector('.text').value = valu + ',';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}<`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}<`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu},`;
-            }
+            document.querySelector('.text').value = valu + '<';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '<';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + ',';
           }
         }
       };
@@ -1437,17 +1451,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}.`;
+            document.querySelector('.text').value = valu + '.';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}>`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}>`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}.`;
-            }
+            document.querySelector('.text').value = valu + '>';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '>';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '.';
           }
         }
       };
@@ -1465,17 +1479,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}/`;
+            document.querySelector('.text').value = valu + '/';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}?`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}?`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}/`;
-            }
+            document.querySelector('.text').value = valu + '?';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '?';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '/';
           }
         }
       };
@@ -1493,17 +1507,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}?`;
+            document.querySelector('.text').value = valu + '?';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}/`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}/`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}?`;
-            }
+            document.querySelector('.text').value = valu + '/';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '/';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '?';
           }
         }
       };
@@ -1521,17 +1535,17 @@ for (let i = 0; i < 14; i += 1) {
         const valu = document.querySelector('.text').value;
         if (fCapsLock === '0') {
           if (fShift === '0') {
-            document.querySelector('.text').value = `${valu}↑`;
+            document.querySelector('.text').value = valu + '↑';
           } else if (fShift === '1') {
             fShift = '0';
-            document.querySelector('.text').value = `${valu}↑`;
-          } else if (fCapsLock === '1') {
-            if (fShift === '0') {
-              document.querySelector('.text').value = `${valu}↑`;
-            } else if (fShift === '1') {
-              fShift = '0';
-              document.querySelector('.text').value = `${valu}↑`;
-            }
+            document.querySelector('.text').value = valu + '↑';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '↑';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '↑';
           }
         }
       };
@@ -1587,30 +1601,165 @@ for (let i = 0; i < 9; i += 1) {
   switch (i) {
     case 0:
       keys.innerHTML = 'Ctrl';
+      const fnCtrl = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+      };
+      keys.addEventListener('click', fnCtrl);
       break;
     case 1:
       keys.innerHTML = 'Win';
+      const fnWin = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+      };
+      keys.addEventListener('click', fnWin);
       break;
     case 2:
       keys.innerHTML = 'Alt';
+      const fnAltLeft = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+      };
+      keys.addEventListener('click', fnAltLeft);
       break;
     case 3:
       keys.innerHTML = 'Space';
+      const fnSpace = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+        var valu = document.querySelector('.text').value;
+        document.querySelector('.text').value = valu + ' ';
+      };
+      keys.addEventListener('click', fnSpace);
       break;
     case 4:
       keys.innerHTML = 'Alt';
+      const fnAlt = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+      };
+      keys.addEventListener('click', fnAlt);
       break;
     case 5:
       keys.innerHTML = 'Ctrl';
+      const fnCtrlRight = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+      };
+      keys.addEventListener('click', fnCtrlRight);
       break;
     case 6:
       keys.innerHTML = '←';
+      keys.classList.add('left_key');
+      const fnRowLeft = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+        const valu = document.querySelector('.text').value;
+        if (fCapsLock === '0') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '←';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '←';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '←';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '←';
+          }
+        }
+      };
+      keys.addEventListener('click', fnRowLeft);
+
       break;
     case 7:
       keys.innerHTML = '↓';
+      keys.classList.add('down_key');
+      const fnRowDown = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+        const valu = document.querySelector('.text').value;
+        if (fCapsLock === '0') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '↓';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '↓';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '↓';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '↓';
+          }
+        }
+      };
+      keys.addEventListener('click', fnRowDown);
       break;
     case 8:
       keys.innerHTML = '→';
+      keys.classList.add('right_key');
+      const fnRowRight = () => {
+        keys.classList.add('active');
+        keys.classList.add('remove');
+        keys.classList.remove('active');
+        setTimeout(() => {
+          keys.classList.remove('remove');
+        }, 200);
+        const valu = document.querySelector('.text').value;
+        if (fCapsLock === '0') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '→';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '→';
+          }
+        } else if (fCapsLock === '1') {
+          if (fShift === '0') {
+            document.querySelector('.text').value = valu + '→';
+          } else if (fShift === '1') {
+            fShift = '0';
+            document.querySelector('.text').value = valu + '→';
+          }
+        }
+      };
+      keys.addEventListener('click', fnRowRight);
       break;
     default:
   }
@@ -1626,6 +1775,12 @@ const capsLock = document.querySelector('.caps_lock_key');
 const keyBoardWrapper = document.querySelector('.keyboard_wrapper');
 const textInputt = document.querySelector('.textarea');
 const tab = document.querySelector('.tab_key');
+const enter = document.querySelector('.enter_key');
+const del = document.querySelector('.key_del');
+const upKey = document.querySelector('.up_key');
+const leftKey = document.querySelector('.left_key');
+const downKey = document.querySelector('.down_key');
+const rightKey = document.querySelector('.right_key');
 
 for (let i = 0; i < keyss.length; i += 1) {
   keyss[i].setAttribute('keyname', keyss[i].innerText);
@@ -1644,8 +1799,17 @@ window.addEventListener('keydown', (e) => {
       keyss[i].classList.add('active');
     }
   }
+  if (e.code === 'ControlLeft') {
+    ctrlLeft.classList.add('active');
+  }
+  if (e.code === 'ControlRight') {
+    ctrlRight.classList.add('active');
+  }
   if (e.code === 'Space') {
     spaceKey.classList.add('active');
+  }
+  if (e.code === 'Enter') {
+    enter.classList.add('active');
   }
   if (e.code === 'ShiftLeft') {
     shiftLeft.classList.add('active');
@@ -1656,11 +1820,29 @@ window.addEventListener('keydown', (e) => {
   if (e.code === 'CapsLock') {
     capsLock.classList.toggle('active');
   }
+  if (e.key === 'Delete') {
+    del.classList.add('active');
+  }
   if (e.code === 'Tab') {
     tab.classList.add('active');
-    document.querySelector('.text').value = `${textInput} `;
+  }
+  if (e.code === 'ArrowLeft') {
+    leftKey.classList.add('active');
+  }
+  if (e.code === 'ArrowRight') {
+    rightKey.classList.add('active');
+  }
+  if (e.code === 'ArrowDown') {
+    downKey.classList.add('active');
+  }
+  if (e.code === 'ArrowUp') {
+    upKey.classList.add('active');
   }
 });
+
+document.onkeydown = function (event) {
+  console.log(event);
+};
 
 window.addEventListener('keyup', (e) => {
   for (let i = 0; i < keyss.length; i += 1) {
@@ -1671,21 +1853,57 @@ window.addEventListener('keyup', (e) => {
       keyss[i].classList.remove('active');
       keyss[i].classList.add('remove');
     }
+    if (e.code === 'ControlLeft') {
+      ctrlLeft.classList.remove('active');
+      ctrlLeft.classList.add('remove');
+    }
+    if (e.code === 'ControlRight') {
+      ctrlRight.classList.remove('active');
+      ctrlRight.classList.add('remove');
+    }
     if (e.code === 'Space') {
       spaceKey.classList.remove('active');
       spaceKey.classList.add('remove');
     }
     if (e.code === 'ShiftLeft') {
       shiftRight.classList.remove('active');
-      shiftRight.classList.remove('remove');
+      shiftRight.classList.add('remove');
     }
     if (e.code === 'ShiftRight') {
       shiftLeft.classList.remove('active');
-      shiftLeft.classList.remove('remove');
+      shiftLeft.classList.add('remove');
+    }
+    if (e.code === 'CapsLock') {
+      capsLock.classList.remove('active');
+      capsLock.classList.add('remove');
+    }
+    if (e.code === 'Enter') {
+      enter.classList.remove('active');
+      enter.classList.add('remove');
     }
     if (e.code === 'Tab') {
-      tab.classList.add('active');
+      tab.classList.remove('active');
       tab.classList.add('remove');
+    }
+    if (e.key === 'Delete') {
+      del.classList.remove('active');
+      del.classList.add('remove');
+    }
+    if (e.code === 'ArrowLeft') {
+      leftKey.classList.remove('active');
+      leftKey.classList.add('remove');
+    }
+    if (e.code === 'ArrowRight') {
+      rightKey.classList.remove('active');
+      rightKey.classList.add('remove');
+    }
+    if (e.code === 'ArrowDown') {
+      downKey.classList.remove('active');
+      downKey.classList.add('remove');
+    }
+    if (e.code === 'ArrowUp') {
+      upKey.classList.remove('active');
+      upKey.classList.add('remove');
     }
     setTimeout(() => {
       keyss[i].classList.remove('remove');

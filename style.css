@@ -133,3 +133,10 @@ body {
   font-size: 28px;
   display: block;
 }
+
+.title {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  font-size: 32px;
+}
